@@ -995,4 +995,9 @@ ul {
 }html {
     scroll-behavior: smooth;
 }
-
+.menu-toggle {
+    z-index: 9999;
+    position: relative;
+    cursor: pointer;
+    padding: 10px;
+}
