@@ -1,24 +1,15 @@
-document.addEventListener("DOMContentLoaded", () => {
 
-    // ===============================
-    // MOBILE MENU
-    // ===============================
+document.addEventListener("DOMContentLoaded", () => {
     const menuToggle = document.querySelector(".menu-toggle");
     const navLinks = document.querySelector(".nav-links");
+
+    if (!menuToggle || !navLinks) {
+        console.log("Menu elements not found");
+        return;
+    }
 
     menuToggle.addEventListener("click", () => {
         navLinks.classList.toggle("show");
     });
-
-    // ===============================
-    // CLOSE MENU AFTER CLICKING A LINK
-    // ===============================
-    const navItems = document.querySelectorAll(".nav-links a");
-
-    navItems.forEach(link => {
-        link.addEventListener("click", () => {
-            navLinks.classList.remove("show");
-        });
-    });
-
 });
+console.log("menu loaded");
